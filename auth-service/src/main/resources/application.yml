@@ -1,0 +1,25 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: auth-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/library_users?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=utf8
+    username: library
+    password: library
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    preferIpAddress: false
+    hostname: localhost
+
+# Same key as api-gateway (Base64, 32+ raw bytes after decode)
+app:
+  jwt:
+    secret-base64: ${JWT_SECRET_BASE64:bGlicmFyeS1kZXYtand0LXNlY3JldC1rZXktbWluLTMyYg==}
+    access-token-validity-seconds: ${JWT_EXPIRY_SECONDS:3600}

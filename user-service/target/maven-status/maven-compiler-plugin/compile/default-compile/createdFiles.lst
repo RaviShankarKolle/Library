@@ -1,0 +1,15 @@
+com/library/userservice/UserServiceApplication.class
+com/library/userservice/domain/User.class
+com/library/userservice/repository/UserRepository.class
+com/library/userservice/kafka/UserKafkaListeners.class
+com/library/userservice/config/PasswordConfig.class
+com/library/userservice/web/UserController.class
+com/library/userservice/web/dto/CreateUserRequest.class
+com/library/userservice/web/error/BorrowNotAllowedException.class
+com/library/userservice/kafka/KafkaActivationConfig.class
+com/library/userservice/kafka/BookIssuedPayload.class
+com/library/userservice/web/error/UserNotFoundException.class
+com/library/userservice/web/error/RestExceptionHandler.class
+com/library/userservice/service/LibraryUserService.class
+com/library/userservice/kafka/BookReturnedPayload.class
+com/library/userservice/web/dto/UserResponse.class

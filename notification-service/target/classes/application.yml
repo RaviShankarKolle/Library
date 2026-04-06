@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: notification-service
+  mail:
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: ${MAIL_SMTP_AUTH:true}
+          starttls:
+            enable: ${MAIL_SMTP_STARTTLS:true}
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:127.0.0.1:9092}
+    consumer:
+      group-id: notification-service
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: earliest
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    preferIpAddress: false
+    hostname: localhost
+
+server:
+  port: 8085
+
+app:
+  clients:
+    user-service-url: ${USER_SERVICE_URL:http://user-service:8081}
+    borrow-service-url: ${BORROW_SERVICE_URL:http://borrow-service:8083}
+  notification:
+    from-email: ${MAIL_FROM:no-reply@library.local}
+    scheduler:
+      enabled: true
+      cron: "0 0 2 * * *"
+      zone: UTC
+  kafka:
+    enabled: false
+    topic-overdue: library.overdue
