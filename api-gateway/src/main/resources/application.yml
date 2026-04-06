@@ -1,0 +1,50 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/api/v1/auth/**
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/api/v1/users/**
+        - id: book-service-books
+          uri: lb://book-service
+          predicates:
+            - Path=/api/v1/books/**
+        - id: book-service-copies
+          uri: lb://book-service
+          predicates:
+            - Path=/api/v1/copies/**
+        - id: borrow-service
+          uri: lb://borrow-service
+          predicates:
+            - Path=/api/v1/borrows/**
+        - id: fine-service-fines
+          uri: lb://fine-service
+          predicates:
+            - Path=/api/v1/fines/**
+        - id: fine-service-user-fines
+          uri: lb://fine-service
+          predicates:
+            - Path=/api/v1/users/*/fines
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    preferIpAddress: false
+    hostname: localhost
+
+# Must match auth-service. Override in production via JWT_SECRET_BASE64 (Base64 of 32+ byte secret).
+app:
+  jwt:
+    secret-base64: ${JWT_SECRET_BASE64:bGlicmFyeS1kZXYtand0LXNlY3JldC1rZXktbWluLTMyYg==}

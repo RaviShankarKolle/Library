@@ -1,0 +1,4 @@
+com/library/gateway/security/JwtRoleConverterConfig$RolesClaimAdapter.class
+com/library/gateway/security/JwtRoleConverterConfig.class
+com/library/gateway/security/GatewaySecurityConfig.class
+com/library/gateway/ApiGatewayApplication.class

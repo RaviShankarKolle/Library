@@ -1,0 +1,16 @@
+com/library/bookservice/web/dto/CreateBookRequest.class
+com/library/bookservice/kafka/KafkaActivationConfig.class
+com/library/bookservice/domain/Book.class
+com/library/bookservice/repository/BookRepository.class
+com/library/bookservice/kafka/BookLendingPayload.class
+com/library/bookservice/domain/BookCopy.class
+com/library/bookservice/web/error/RestExceptionHandler.class
+com/library/bookservice/web/dto/CopyResponse.class
+com/library/bookservice/BookServiceApplication.class
+com/library/bookservice/web/dto/AddCopyRequest.class
+com/library/bookservice/web/BookController.class
+com/library/bookservice/web/error/ConflictException.class
+com/library/bookservice/service/LibraryBookService.class
+com/library/bookservice/web/error/NotFoundException.class
+com/library/bookservice/kafka/BookKafkaListeners.class
+com/library/bookservice/web/dto/BookResponse.class

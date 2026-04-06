@@ -1,0 +1,16 @@
+/Users/as-mac-1061/Documents/library2/book-service/src/main/java/com/library/bookservice/web/dto/CreateBookRequest.java
+/Users/as-mac-1061/Documents/library2/book-service/src/main/java/com/library/bookservice/web/dto/BookResponse.java
+/Users/as-mac-1061/Documents/library2/book-service/src/main/java/com/library/bookservice/kafka/BookLendingPayload.java
+/Users/as-mac-1061/Documents/library2/book-service/src/main/java/com/library/bookservice/web/dto/AddCopyRequest.java
+/Users/as-mac-1061/Documents/library2/book-service/src/main/java/com/library/bookservice/kafka/KafkaActivationConfig.java
+/Users/as-mac-1061/Documents/library2/book-service/src/main/java/com/library/bookservice/web/error/RestExceptionHandler.java
+/Users/as-mac-1061/Documents/library2/book-service/src/main/java/com/library/bookservice/web/error/ConflictException.java
+/Users/as-mac-1061/Documents/library2/book-service/src/main/java/com/library/bookservice/kafka/BookKafkaListeners.java
+/Users/as-mac-1061/Documents/library2/book-service/src/main/java/com/library/bookservice/BookServiceApplication.java
+/Users/as-mac-1061/Documents/library2/book-service/src/main/java/com/library/bookservice/repository/BookRepository.java
+/Users/as-mac-1061/Documents/library2/book-service/src/main/java/com/library/bookservice/web/BookController.java
+/Users/as-mac-1061/Documents/library2/book-service/src/main/java/com/library/bookservice/domain/Book.java
+/Users/as-mac-1061/Documents/library2/book-service/src/main/java/com/library/bookservice/domain/BookCopy.java
+/Users/as-mac-1061/Documents/library2/book-service/src/main/java/com/library/bookservice/web/dto/CopyResponse.java
+/Users/as-mac-1061/Documents/library2/book-service/src/main/java/com/library/bookservice/web/error/NotFoundException.java
+/Users/as-mac-1061/Documents/library2/book-service/src/main/java/com/library/bookservice/service/LibraryBookService.java

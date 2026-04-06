@@ -1,0 +1,17 @@
+com/library/borrowservice/schedule/OverdueScheduler.class
+com/library/borrowservice/service/LibraryBorrowService.class
+com/library/borrowservice/client/CopyInfo.class
+com/library/borrowservice/web/BorrowController.class
+com/library/borrowservice/kafka/BookLendingPayload.class
+com/library/borrowservice/web/error/RestExceptionHandler.class
+com/library/borrowservice/domain/BorrowRecord.class
+com/library/borrowservice/client/BookServiceClient.class
+com/library/borrowservice/kafka/OverduePayload.class
+com/library/borrowservice/client/UserServiceClient.class
+com/library/borrowservice/kafka/BorrowEventPublisher.class
+com/library/borrowservice/BorrowServiceApplication.class
+com/library/borrowservice/repository/BorrowRepository.class
+com/library/borrowservice/web/dto/CreateBorrowRequest.class
+com/library/borrowservice/client/ClientConfiguration.class
+com/library/borrowservice/web/dto/BorrowResponse.class
+com/library/borrowservice/web/error/ConflictException.class

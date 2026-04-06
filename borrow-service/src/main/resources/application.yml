@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: borrow-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/library_borrows?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=utf8
+    username: library
+    password: library
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  sql:
+    init:
+      mode: always
+      encoding: UTF-8
+
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:127.0.0.1:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    preferIpAddress: false
+    hostname: localhost
+
+server:
+  port: 8083
+
+app:
+  clients:
+    user-service-url: http://user-service:8081
+    book-service-url: http://book-service:8082
+  kafka:
+    enabled: false
+    topic-book-issued: library.book.issued
+    topic-book-returned: library.book.returned
+    topic-overdue: library.overdue
+  borrow:
+    overdue-cron: "0 0 1 * * *"
+    overdue-zone: UTC
